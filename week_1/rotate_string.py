@@ -8,6 +8,8 @@ def rotate_string(s1, s2):
     True
     >>> rotate_string('aaa', 'a')
     False
+    >>> rotate_string('aab', 'aba')
+    True
     """
     # kmp case
     if len(s1) !=len(s2):
@@ -26,6 +28,11 @@ def rotate_string(s1, s2):
             id2 += 1
         else:
             id2 = 0
+            if s1[i] == s2[id2]:
+                id2 += 1
+
+    if id2 >= len(s2):
+        return True
 
     return False
 
