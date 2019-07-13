@@ -5,6 +5,10 @@ def rotate_string(s1, s2):
     >>> rotate_string('abcde', 'cdeac')
     False
     """
+    # kmp case
+    if len(s1) !=len(s2):
+        return False
+
     if s1 == s2:
         return True
 
